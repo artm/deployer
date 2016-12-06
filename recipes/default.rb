@@ -18,10 +18,6 @@
 # limitations under the License.
 #
 
-if Chef::Config[:solo]
-  return Chef::Log.warn('This recipe uses search. Chef Solo does not support search.')
-end
-
 # GRP deploy
 group node['deployer']['group'] do
   gid       5000
